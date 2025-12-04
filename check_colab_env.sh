@@ -14,8 +14,8 @@ END
 fi
 
 # --- 2. Clone GitHub repo if not present ---
-REPO_DIR="/content/my-colab-scripts"
-REPO_URL="https://github.com/username/my-colab-scripts.git"
+REPO_DIR="/content/drive/MyDrive/Colab\ Notebooks/"
+REPO_URL="https://github.com/s2g1/AiHelper.git"
 
 if [ ! -d "$REPO_DIR" ]; then
     echo "Cloning repository..."
@@ -59,6 +59,7 @@ else
     # Example aliases
     alias ll='ls -la'
     alias gs='git status'
+    alias qpush='f(){git add $1 && git commit -m "$2" && git push; }; f'
 fi
 
 echo "Environment setup complete!"
